@@ -23,6 +23,8 @@ app.get('/data', (req, res) => {
   console.log(url.parse(req.url))
   res.send(fs.readdirSync('./data'))
 })
+
+//чёбы json в body прилетал
 app.use(bodyParser.json());
 // app.use(express.static('./data', options))
 app.get('/data/*', (req, res) => {
